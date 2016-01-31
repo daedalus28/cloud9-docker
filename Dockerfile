@@ -25,7 +25,7 @@ RUN scripts/install-sdk.sh
 RUN sed -i -e 's_127.0.0.1_0.0.0.0_g' /cloud9/configs/standalone.js 
 
 # Add supervisord conf
-ADD conf/cloud9.conf /etc/supervisor/conf.d/
+# ADD conf/cloud9.conf /etc/supervisor/conf.d/
 
 # ------------------------------------------------------------------------------
 # Add volumes
@@ -43,4 +43,4 @@ EXPOSE 3000
 
 # ------------------------------------------------------------------------------
 # Start supervisor, define default command.
-CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
+# CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
